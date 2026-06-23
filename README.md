@@ -7,7 +7,7 @@
 | 实验一 | 心跳信号分类预测 | ECGNet 一维卷积神经网络 | `数据集/train.csv` | `exp1_heartbeat/` |
 | 实验二 | 新闻文本分类 | `bert-base-chinese` 微调 | `数据集/train_set.csv` | `exp2_news/` |
 
-建议最终上传 GitHub 时保持下面这种结构：
+建议最终上传 GitHub ：
 
 ```text
 .
