@@ -31,7 +31,6 @@
    └─ README.md
 ```
 
-注意：`train.csv` 和 `train_set.csv` 文件很大，普通 GitHub 仓库不能直接上传超过 100MB 的单个文件。如果必须把数据也放到 GitHub，请使用 Git LFS；如果只是提交代码仓库，建议只保留 `数据集/README.md`，真实数据集放在本地。
 
 ## 环境安装
 
@@ -207,45 +206,6 @@ python train_bert.py --bert_path bert-base-chinese --epochs 30 --batch_size 8 --
 
 训练开始时如果看到类似 `UNEXPECTED` 的提示，一般是因为加载预训练 BERT 时忽略了预训练任务头，属于正常现象，不影响文本分类微调。
 
-## GitHub 上传建议
-
-建议上传：
-
-```text
-README.md
-requirements.txt
-requirements-bert.txt
-数据集/README.md
-exp1_heartbeat/
-exp2_news/
-```
-
-不建议上传：
-
-```text
-数据集/train.csv
-数据集/train_set.csv
-*.pth
-*.pt
-split_indices*.csv
-final_metrics*.csv
-classification_report*.txt
-test_predictions*.csv
-training_curve.png
-training_loss.png
-eda_*.png
-__pycache__/
-```
-
-如果老师明确要求 GitHub 里包含真实数据集，需要使用 Git LFS：
-
-```powershell
-git lfs install
-git lfs track "数据集/*.csv"
-git add .gitattributes 数据集/train.csv 数据集/train_set.csv
-```
-
-否则普通 `git push` 会因为单个 CSV 文件超过 100MB 而失败。
 
 ## 最短复现实验流程
 
