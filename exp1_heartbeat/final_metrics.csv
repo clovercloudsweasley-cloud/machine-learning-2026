@@ -1,0 +1,2 @@
+model,train_size,test_size,test_loss,test_accuracy,test_abs_sum
+ecgnet,80000,20000,0.04811295049734295,0.9948,0.010891496421515058
