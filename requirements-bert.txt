@@ -1,0 +1,4 @@
+-r requirements.txt
+
+# Optional dependency for exp2_news/train_bert.py.
+transformers>=4.30.0
